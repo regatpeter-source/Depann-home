@@ -846,7 +846,67 @@ RESPONSIVE
 
     .section-title h2{
 
-        font-size:32px;
+        font-size:32px;/*=========================================
+HORAIRES
+=========================================*/
+
+.opening-hours{
+
+    margin-top:35px;
+
+    background:#fff;
+
+    border:2px solid var(--green);
+
+    border-radius:18px;
+
+    padding:22px;
+
+}
+
+.opening-hours h4{
+
+    color:#111;
+
+    font-size:22px;
+
+    margin-bottom:20px;
+
+}
+
+.hours-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:14px 0;
+
+}
+
+.hours-item:first-of-type{
+
+    border-bottom:1px solid #e8e8e8;
+
+}
+
+.hours-item strong{
+
+    color:#111;
+
+    font-weight:600;
+
+}
+
+.hours-item span{
+
+    color:var(--green);
+
+    font-weight:700;
+
+}
 
     }
 
