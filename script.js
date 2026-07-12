@@ -191,7 +191,7 @@ Message :
 ${message}`;
 
         window.location.href =
-            `mailto:contact@depann-home.fr?subject=${encodeURIComponent(sujet)}&body=${encodeURIComponent(corps)}`;
+            `mailto:depannhome44@gmail.com?subject=${encodeURIComponent(sujet)}&body=${encodeURIComponent(corps)}`;
 
     });
 
