@@ -156,38 +156,42 @@ topButton.addEventListener("click",()=>{
 
 
 /* =====================================
-   Validation formulaire
+   Formulaire de contact
+   Ouvre la messagerie du visiteur
 ===================================== */
 
-const form = document.querySelector("form");
+const form = document.getElementById("contactForm");
 
-if(form){
+if (form) {
 
-    form.addEventListener("submit",(e)=>{
+    form.addEventListener("submit", function (e) {
 
         e.preventDefault();
 
-        const nom=form.querySelector('input[type="text"]').value.trim();
-        const email=form.querySelector('input[type="email"]').value.trim();
-        const message=form.querySelector("textarea").value.trim();
+        const nom = document.getElementById("nom").value.trim();
+        const telephone = document.getElementById("telephone").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
 
-        if(nom==="" || email==="" || message===""){
+        const sujet = "Demande de contact - Depann'Home";
 
-            alert("Merci de compléter tous les champs obligatoires.");
+        const corps =
+`Bonjour,
 
-            return;
+Je souhaite vous contacter.
 
-        }
+Nom : ${nom}
 
-        alert(
-`Merci ${nom} !
+Téléphone : ${telephone}
 
-Votre demande a bien été enregistrée.
+E-mail : ${email}
 
-Nous vous recontacterons dans les meilleurs délais.`
-        );
+Message :
 
-        form.reset();
+${message}`;
+
+        window.location.href =
+            `mailto:contact@depann-home.fr?subject=${encodeURIComponent(sujet)}&body=${encodeURIComponent(corps)}`;
 
     });
 
